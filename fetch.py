@@ -13,7 +13,7 @@ fetch_file_base_url = "https://pdbj.org/rest/newweb/fetch/file"
 for i in ids:
   # 一旦10回ループしたら終了する
   break if i == 9
-  fetch_file_params = "format=pdb&id="+i
+  fetch_file_params = "format=pdb&id="+ids[i]
   fetch_file_response = urllib.request.urlopen(fetch_file_base_url+"?"+fetch_file_params).read()
 
 
